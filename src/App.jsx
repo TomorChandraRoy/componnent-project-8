@@ -1,23 +1,21 @@
+
 import "./App.css";
+import Navbar from "./Navbar/Navbar";
+import Phone from "./components/Phones/Phone";
+import PriceOption from './components/PriceOptions/PriceOption';
+import Barchat from "./components/barChart/barchat";
+import Reachart from "./components/reachart/Reachart";
 
 function App() {
   return (
     <>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
+    <Navbar></Navbar>
+    <PriceOption></PriceOption>
+<div className=" flex">
+    <Reachart></Reachart>
+    <Barchat></Barchat>
+</div>
+<Phone></Phone>
     </>
   );
 }
